@@ -10,7 +10,7 @@
 
 ## 📸 Aperçu
 
-![Aperçu](https://via.placeholder.com/800x400.png?text=Apercu+du+projet)
+![Aperçu](images/apercu.png)
 
 ---
 
