@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <title>Comparaison de fichiers</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        text-align: center;
+        padding: 50px;
+      }
+      .container {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        width: 50%;
+        margin: auto;
+      }
+      h2 {
+        color: #333;
+      }
+      input[type="file"] {
+        margin: 10px 0;
+      }
+      input[type="submit"] {
+        background-color: #28a745;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+      input[type="submit"]:hover {
+        background-color: #218838;
+      }
+      .download-link {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Déposez deux fichiers pour comparaison</h2>
+      <form action="/" method="post" enctype="multipart/form-data">
+        <label for="file1">Fichier J0 :</label>
+        <input type="file" name="file1" id="file1" required /><br /><br />
+
+        <label for="file2">Fichier J1 :</label>
+        <input type="file" name="file2" id="file2" required /><br /><br />
+
+        <input type="submit" value="Lancer la comparaison" />
+      </form>
+
+      {% if fichier_genere %}
+      <div class="download-link">
+        <p>Comparaison terminée !</p>
+        <a href="{{ url_for('download_file') }}" download="resultat.xlsx">
+          <button>Télécharger le fichier Excel</button>
+        </a>
+      </div>
+      {% endif %}
+    </div>
+  </body>
+</html>
