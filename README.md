@@ -4,7 +4,7 @@
 ![GitHub license](https://img.shields.io/github/license/user/repo)
 ![GitHub issues](https://img.shields.io/github/issues/user/repo)
 
-> Un outil simple en Python permettant de comparer deux fichiers texte et d’exporter les différences.
+> Un outil simple en Python permettant de comparer deux fichiers texte et d’exporter les différences dans un fichier excel pour analyse.
 
 ---
 
